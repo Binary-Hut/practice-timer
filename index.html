@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f0e6">
+  <title>Practice Timer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="timer-card" aria-labelledby="app-title">
+      <div class="staff staff-top" aria-hidden="true"><span>♪</span><span>♫</span><span>♩</span></div>
+
+      <header class="app-header">
+        <p class="eyebrow">Focused practice</p>
+        <h1 id="app-title">Practice Timer</h1>
+        <p class="subtitle">Choose your session, press start, and stay with the music.</p>
+      </header>
+
+      <div class="timer-face" aria-live="polite" aria-atomic="true">
+        <span id="timeDisplay">05:00</span>
+      </div>
+      <p id="statusText" class="status-text" role="status">Ready to practice</p>
+
+      <section class="duration-panel" aria-labelledby="duration-title">
+        <h2 id="duration-title">Session length</h2>
+        <div class="preset-grid" role="group" aria-label="Practice duration presets">
+          <button class="preset is-selected" type="button" data-minutes="5" aria-pressed="true">5 min</button>
+          <button class="preset" type="button" data-minutes="10" aria-pressed="false">10 min</button>
+          <button class="preset" type="button" data-minutes="15" aria-pressed="false">15 min</button>
+          <button class="preset" type="button" data-minutes="25" aria-pressed="false">25 min</button>
+          <button class="preset" type="button" data-minutes="30" aria-pressed="false">30 min</button>
+          <button class="preset" type="button" data-minutes="45" aria-pressed="false">45 min</button>
+          <button class="preset" type="button" data-minutes="60" aria-pressed="false">60 min</button>
+        </div>
+
+        <form id="customForm" class="custom-form">
+          <label for="customMinutes">Custom minutes</label>
+          <div class="custom-row">
+            <input id="customMinutes" name="minutes" type="number" min="1" max="999" step="1" inputmode="numeric" placeholder="20">
+            <button id="setCustom" class="secondary-button" type="submit">Set</button>
+          </div>
+          <p id="inputError" class="input-error" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <div class="controls" aria-label="Timer controls">
+        <button id="startBtn" class="control primary" type="button">Start</button>
+        <button id="pauseBtn" class="control" type="button" disabled>Pause</button>
+        <button id="stopBtn" class="control" type="button" disabled>Stop</button>
+        <button id="resetBtn" class="control ghost" type="button">Reset</button>
+      </div>
+
+      <div class="staff staff-bottom" aria-hidden="true"><span>𝄞</span><span>♬</span></div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
