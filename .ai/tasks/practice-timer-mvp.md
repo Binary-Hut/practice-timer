@@ -1,6 +1,6 @@
 # Task Plan — Practice Timer MVP
 
-Status: PAUSED_AI_FAILURE
+Status: READY_FOR_RETRY
 
 Issue: #3
 Owner architecture/dependency approval: 2026-09-19
