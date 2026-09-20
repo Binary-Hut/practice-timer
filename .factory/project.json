@@ -6,7 +6,7 @@
     "slug": "practice-timer",
     "description": "Build a simple musical practice timer for music students.\n\nCore features:\n- Set a practice duration in minutes.\n- Start, pause/resume, and stop the timer.\n- Reset the timer after stopping.\n- Show the remaining time clearly in minutes and seconds.\n- Play a simple notification when the practice session finishes.\n- Include quick duration presets such as 5, 10, 15, 25, 30, 45, and 60 minutes.\n- Keep the application simple and easy to use.\n\nDesign:\n- The interface should have a polished musical theme.\n- Use subtle musical notes, staff/clef elements, or other music-inspired visual details.\n- The timer should be the main visual focus.\n- Use the supplied Practice Timer design concept as visual inspiration, but keep the implementation clean and responsive for desktop and mobile.\n- Avoid unnecessary complexity, accounts, databases, or external services for this first version.",
     "project_type": "web-app",
-    "deployment": "none",
+    "deployment": "vercel",
     "agents": {
       "planner": "manual-claude",
       "developer": "codex",
