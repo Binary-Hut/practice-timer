@@ -67,6 +67,20 @@ h1 {
   letter-spacing: -.035em;
 }
 
+.session-title {
+  display: inline-block;
+  min-width: 8ch;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+.session-title[contenteditable="true"] {
+  cursor: text;
+}
+.session-title:focus {
+  outline: 3px solid rgba(123, 79, 55, .12);
+  outline-offset: 4px;
+}
+
 .subtitle {
   max-width: 480px;
   margin: 10px auto 0;

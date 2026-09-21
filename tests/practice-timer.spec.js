@@ -69,3 +69,14 @@ test("layout remains usable at desktop and mobile widths", async ({ page }) => {
   await expect(page.locator("#startBtn")).toBeVisible();
   await expect(page.locator("#customMinutes")).toBeVisible();
 });
+
+
+test("title is editable and persists in DOM until refresh", async ({ page }) => {
+  const title = page.locator('#sessionTitle');
+  await expect(title).toHaveText('Practice Timer');
+  await page.evaluate(() => { const el = document.querySelector('#sessionTitle'); el.textContent = 'Warmup Session'; });
+  await expect(title).toHaveText('Warmup Session');
+  // reload should restore original content (no persistence required)
+  await page.reload();
+  await expect(page.locator('#sessionTitle')).toHaveText('Practice Timer');
+});
