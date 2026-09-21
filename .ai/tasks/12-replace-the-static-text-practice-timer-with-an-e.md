@@ -1,6 +1,6 @@
 # Task #12 — Replace the static text "Practice Timer" with an editable title at the top of the app
 
-Status: DEVELOPING
+Status: READY_FOR_REVIEW
 
 ## Owner request
 
